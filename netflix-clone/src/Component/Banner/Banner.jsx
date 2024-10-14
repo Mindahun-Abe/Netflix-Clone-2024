@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import axios from '../Utilities/axios';
 import requests from '../Utilities/requests';
-
+import './Banner.css'
 
 
 
@@ -15,13 +15,15 @@ const Banner = () => {
 	  const fetchmovie = async () => {
 		try {
 		  const request = await axios.get('requests.fetchNetflixOriginals');
-		  setmovie(request.data.results[Math.floor(Math.random()*request.data.results.length)
-		  ]);
+		//   console.log(request);
+		  setmovie(request.data.results[Math.floor(Math.random()*request.data.results.length)]); 
 		} catch (error) {
 		  console.log('Error fetching movie:', error);
-		}
+		}		
 	  };  
-
+	  function trancate(str,n){
+return str?.length>n>str.substr(0,n-1)+'...';str;
+	};
 
 	return (
 		<div className='Banner' 
@@ -30,7 +32,7 @@ const Banner = () => {
             backImage: 'url("https://image.tmdb.org/t/p/original${movie?backdrop_path}")',
 			backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat'
-		}}
+}}
 		>
 		<div className='Banner_contents'>
           <h1 className='Banner_title'>
