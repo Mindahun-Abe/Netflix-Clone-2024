@@ -1,19 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Header from '../../Component/Header/Header'
-import Footer from '../../Component/Footer/Footer';
+//import Footer from '../../Component/Footer/Footer';
 import Banner from '../../Component/Banner/Banner';
-import RowList from '../../Component/Rows/RowLists/RowList'
+//import RowList from '../../Component/Rows/RowLists/RowList'
 
 
 
 const Home = () => {
 	return (
 		<div>
-  <Header/>
+ 
+ <Header/>
 <Banner/>
-<RowList/>
-  <Footer/>
 
 		</div>
 	);

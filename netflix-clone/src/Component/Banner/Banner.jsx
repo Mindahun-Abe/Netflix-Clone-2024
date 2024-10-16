@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import axios from '../Utilities/axios';
-import requests from '../Utilities/requests';
-import './Banner.css'
+import axios from '../utils/axios';
+import requests from '../utils/requests';
+import './Banner.css';
 
 
 

@@ -2,7 +2,7 @@
 import axios from 'axios'
 
 const instance = axios.create ({
-	curl: "https://api.themoviedb.org/3",
+	base_URL: "https://api.themoviedb.org/3",
 	
 });
 
